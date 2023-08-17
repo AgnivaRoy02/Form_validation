@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d1d0d082;
+    font-size: 14px;
+}
+.container{
+    background: white;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
+    position: relative;
+}
+.fa-paper-plane{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.container h2{
+    font-size: 25px;
+    /* margin: auto; */
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 24px;
+    user-select: none;
+    margin-top: 20px ;
+}
+.input-name{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+.input-name .name{
+    padding: 5px 0px 5px 40px;
+    width: 45%;
+    border-radius: 5px;
+}
+.fa-user{
+    padding: 5px 10px;
+}
+.input-name span{
+    margin-left: 35px;
+}
+#name-error{
+    margin-top: 1px;
+    margin-left: 5px;
+    color:red;
+    border: 0px;
+}
+#name-error i#wrong{
+    color: red;
+}
+#name-error i{
+    color: seagreen;
+    border: 0;
+    margin-top: 0;
+}
+
+.text-email, .input-name .phone{
+    width: 100%;
+    padding: 5px 0px 5px 40px;
+    border-radius: 5px;
+}
+.fa-envelope{
+    padding:5px 8px  ;
+    border-right: 5px solid #cccccc;
+}
+.input-name i{
+    position: absolute;
+    font-size: 18px;
+    color: blue;
+    border-right: 1px solid #cccccc;
+}
+.fa-lock{
+    padding: 5px 10px ;
+}
+
+.text-email , .name, .phone{
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-transform: all 0.30s ease-in-out;
+    -moz-transform: all 0.30s ease-in-out;
+    -ms-transform: all 0.30s ease-in-out;
+    transform: all 0.30s ease-in-out;
+}
+.fa-phone{
+    padding: 5px 9px ;
+}
+.text-email:hover , .name:hover , .phone:hover{
+    background-color: #fafafa;
+}
+.text-email:focus , .name:focus ,.phone:focus{
+border: 1px solid blue;
+}
+#phone-error , #email-error{
+    margin: 10px 0 5px 2px;
+    color: red;
+}
+.radio-button{
+    margin-right:2px;
+}
+.Gender{
+    margin-right: 25px;
+}
+.form-control{
+    width: 25%;
+    position: relative;
+    margin-left: 5px;
+    border: 1px solid #8e8b8b; ;
+}
+#dob{
+    cursor: pointer;
+}
+#age{
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    
+}
+.country{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 0 15px;
+    cursor: pointer;
+    border: 1px solid rgba(115, 115, 202, 0.294);
+    color: #7b7b7b;
+    border-radius: 0;
+    background-color: white;
+    appearance: none;
+}
+.country::-ms-expand{
+    display: none;
+}
+.country:hover, .country:focus{
+    color:blue;
+    background-color: #fafafa;
+    border-color: rgb(59, 59, 233);
+    border-radius: 5px;
+    outline: none;
+}
+.arrow{
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+.country:hover + .arrow{
+    border-color: blue transparent transparent transparent;
+}
+.Register{
+    display: flex;
+}
+.button{
+    background-color: blue;
+    width: 50%;
+    color: white;
+    height: 35px;
+    list-style: none;
+    line-height: 25px;
+    border-radius: 50px;
+    /* border: 1px solid #7b7b7b; */
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+.button:hover{
+    box-shadow: 2px 3px 5px 5px rgba(105, 124, 243, 0.5);
+    background-color: rgb(18, 18, 77);
+    font-weight: bold;
+}
+#submit-error{
+    margin-left: 30px;
+    color: red;
+}
+@media (max-width : 480px)
+{
+    .container{
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+    }
+    .input-name{
+        margin-bottom: -10px;
+        width: 100%;
+    }
+    .input-name .name{
+        width: 100%;
+        padding: 8px 0 8px 40px;
+        margin-bottom: 5px;
+    }
+    .input-name span{
+        padding: 0;
+        margin: 0;
+    }
+    .form-container{
+        width: 100%;
+        padding: 10px;
+    }
+    .container h2{
+        font-size: 20px;
+        /* margin: auto; */
+        padding: 10px;
+        text-align: center;
+        line-height: 2px;
+        user-select: none;
+    }
+}

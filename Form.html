@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link rel="stylesheet" href="Form.css">
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-paper-plane"></i>
+        <h2>Registration Form</h2>
+        <div class="form-container">
+            <form>
+
+                <div class="input-name">
+                    <i class='fa fa-user'></i>
+                    <input type="text" placeholder="First Name" class="name" id="contact-name" onkeyup="validateName()">
+                    <i id="name-error"></i>
+                    <span>
+                        <i class='fa fa-user'></i>  
+                        <input type="text" placeholder="Last Name" class="name" id="contact-name" onkeyup="validateName()">
+                    </span>
+                </div>
+
+                <div class="input-name">
+                    <i class='fa fa-envelope email'></i>
+                    <input type="email" placeholder="email@gmail.com" class="text-email" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                    <i id="email-error"></i>
+                </div>
+                <div class="input-name">
+                    <i class='fa fa-lock'></i>
+                    <input type="password" placeholder="Password" class="text-email">
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-phone"></i>
+                    <input type="text" placeholder="123 456 7890" class="phone" id="contact-phone" onkeyup="return validatePhone()" value="">
+                    <span id="phone-error"></span>
+                </div>
+                <div class="input-name">
+                    <input type="radio" class="radio-button" name="1">
+                    <label for="male" class="Gender">Male</label>
+                    <input type="radio" class="radio-button" name="1">
+                    <label class="Gender" >Female</label>
+                </div>
+                <div class="input-name">
+                    Date of Birth : <input type="date" name="dob" id="dob" class="form-control">
+                </div>
+                
+                <div class="input-name">
+                    Age : <input type="tel" readonly id="age" name="age" onmousemove="FindAge()" placeholder="Your Age" class="form-control">
+                </div>
+                <div class="input-name">
+                    <select class="country">
+                        <option value="sect">Select a Country</option>
+                        <option value="Ind">India</option>
+                        <option value="Jap">Japan</option>
+                        <option value="Eng">England</option>
+                        <option value="Ban">Bangladash</option>
+                        <option value="Aus">Australia</option>
+                        <option value="Nepal">Nepal</option>
+                    </select>
+                    <div class="arrow"></div>
+                </div>
+                <div class="input-name">
+                    <input type="checkbox" class="check-button">
+                    <label> I accept the terms and conditions</label>
+                </div>
+                <div class="Register">
+                    <input type="submit" class="button" value="Register" onclick="return validateForm()">
+                    
+                    <input type="reset" class ="button" value="Reset Now">
+                    <br></div>
+                    <div id="submit-error"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="Form.js"></script>
+</body>
+</html>
